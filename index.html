@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrolgy by Arup - Demo</title>
+        <title>Astrology by Arup | Accurate Vedic Readings</title>
+    <meta name="description" content="Personalized astrology readings by Arup - love, marriage, career, finance. Over 20 years of experience.">
+    <meta name="keywords" content="astrology, vedic, horoscope, arup, marriage matching, personal reading">
+
     <script defer src="javascript.js"></script>
     <style>
         body{
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #fffaf5;
             color: #333;
         }
@@ -73,7 +77,12 @@
            width: 250px;
            border-radius: 10px;
            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+           transition: 0.6s ease-in-out;
+           opacity: 0;
+           transform: translateY(50px);
+             }
+
+        
 
         footer{
             background-color: #222;
@@ -93,9 +102,24 @@
             font-size: 2.2rem;
         }
 
-        .hero p {
+        .hero p{
             font-size: 1rem;
         }
+
+        body.dark{
+            background-color: #111;
+            color: #f5f5f5;
+        }
+
+        body.dark .card{
+            background-color: #222;
+            color: #fff;
+        }
+
+        h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+        }
+
     
     </style>
 </head>
@@ -104,9 +128,10 @@
     <header class="hero">
         <div class="overlay"></div>
         <div class="hero-text">
-            <h1>Astrolgy by Arup</h1>
-            <p>Know your destiny, find your path.</p>
-            <a href="#services" class="btn">Explore Services</a>
+            <h1>Discover Your True Path</h1>
+                <p>Professional astrology guidance to align your destiny.</p>
+            <a href="#contact" class="btn">Book a Consultation</a>
+            <button onclick="toggleDarkMode()" class="btn">Toggle Dark Mode</button>
         </div>        
     </header>
 
@@ -114,6 +139,13 @@
         <h2>About Me</h2>
         <p>I am Arup, a professional astrologer with over 20 years of experience helping people understand their life path, love, career, and destiny.</p>
     </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+                <p>Have a question or want to schedule a session?</p>
+                    <a class="btn" href="https://wa.me/393331234567" target="_blank">Message Me on WhatsApp</a>
+        </section>
+
 
     <section id="services" class="services">
         <h2>My Services</h2>
@@ -133,13 +165,57 @@
         </div>
     </section>
 
+    <section id="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="cards">
+        <div class="card">
+            <p>"Incredibly accurate. Arup gave me the clarity I needed!"</p>
+            <strong>- Rina K.</strong>
+        </div>
+        <div class="card">
+            <p>"The marriage matching was perfect. We're happily engaged now!"</p>
+            <strong>- Akash D.</strong>
+        </div>
+    </div>
+</section>
+
+   
+    <section id="cosmic">
+  <h2>The Power of the Stars</h2>
+  <img src="Astrolgy photo.jpg" alt="Astrology and planets" style="max-width: 100%; border-radius: 10px;">
+  <p>Astrology is not superstition — it's a celestial map of your life's journey.</p>
+</section>
+
+
     <section>
         <h2>Testimonials</h2>
         <p>"Arup's reading changed my life! Highly accurate and insightful." - Priya S.</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Astrolgy by Arup. All rights reserved.</p>
-    </footer>
+    <p>&copy; 2025 Astrology by Arup. All rights reserved.</p>
+    <p>
+        <a href="#" style="color:#ffd700; text-decoration:none;">Facebook</a> |
+        <a href="#" style="color:#ffd700; text-decoration:none;">Instagram</a> |
+        <a href="#" style="color:#ffd700; text-decoration:none;">YouTube</a>
+    </p>
+</footer>
 </body>
+<script>    
+  const cards = document.querySelectorAll('.card');
+  window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 100){
+        card.style.opacity = 1;
+        card.style.transform = 'translateY(0)';
+      }
+    });
+  });
+</script>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+}
+</script>
 </html>
