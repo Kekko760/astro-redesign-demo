@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <meta property="og:title" content="Astrology by Arup – Personalized Readings"/>
+<meta property="og:description" content="Over 20 years experience in Vedic astrology guidance."/>
+<meta property="og:image" content="images/og-image.jpg"/>
+
+
+
+    <meta name="description" content="Professional astrology services by Arup – horoscope, marriage matching, career guidance.">
+<meta name="keywords" content="astrology, horoscope, vedic astrology, zodiac, marriage matching">
+<title>Arup Astrology - Personalized Horoscope & Guidance</title>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
         <title>Astrology by Arup | Accurate Vedic Readings</title>
     <meta name="description" content="Personalized astrology readings by Arup - love, marriage, career, finance. Over 20 years of experience.">
     <meta name="keywords" content="astrology, vedic, horoscope, arup, marriage matching, personal reading">
@@ -77,10 +91,15 @@
            width: 250px;
            border-radius: 10px;
            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-           transition: 0.6s ease-in-out;
+           transition: 0.6s ease-in-out, transform 0.6s ease-out;
            opacity: 0;
-           transform: translateY(50px);
+           transform: translateY(30px);
              }
+
+             .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+                           }  
 
         
 
@@ -117,13 +136,168 @@
         }
 
         h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', serif;
         }
 
-    
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%;
+            display: flex;
+             justify-content: center;
+            gap: 20px;
+            background: rgba(0,0,0,0.6);
+            padding: 15px 0;
+            z-index: 100;
+                }
+       
+                .navbar a { color: #fff; text-decoration: none; font-weight: bold; 
+                    }
+        
+                    .navbar a:hover { color: #ffd700;
+                 }
+        
+                 body { padding-top: 60px; 
+                }
+
+                .zodiac-icons {
+                display: flex; flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+                margin: 40px 0;
+            }
+                .zodiac-icons img {
+                width: 60px;
+                opacity: 0.7;
+                transition: opacity 0.3s;
+            }
+                .zodiac-icons img:hover {
+                opacity: 1;
+            }
+
+            .test-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+                    }
+            .test-card img {
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+                        }
+
+            form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto; }
+            input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; 
+            }
+
+            .logo { font-family:'Playfair Display'; font-size:1.5rem; color:#ffd700; }
+            .nav-links { display:flex; gap:20px; }
+            @media(max-width:768px) {
+            .nav-links { display:none; }
+            /* aggiungi eventual toggle mobile */
+                    }
+
+                    .arrow {
+            position:absolute; bottom:20px; font-size:2rem; color:#fff;
+            animation: bounce 2s infinite;
+                        }
+            @keyframes bounce {
+            0%,100%{transform: translateY(0);}
+            50%{transform: translateY(10px);}
+                        }
+
+                .reasons { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; 
+                }
+            .reason { background:#fff; padding:20px; width:250px; text-align:center; border-radius:10px; 
+            }
+
+            #daily { background:#222; color:#fff; padding:40px 20px; 
+            }
+            .horoscope { font-style:italic; font-size:1.1rem; max-width:600px; margin:auto; 
+            }
+
+            .footer {
+            background-color: #111;
+             color: #ccc;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+            }
+
+            .footer a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: 0.3s;
+                }
+
+            .footer a:hover {
+            color: #fff;
+                }
+
+            .footer-top {
+            margin-bottom: 10px;
+                    }
+
+            .footer-bottom {
+            font-size: 0.85rem;
+            color: #aaa;
+                }
+
+                .contact-section {
+            background-color: #fffaf5;
+            padding: 60px 20px;
+            text-align: center;
+}
+
+                .contact-form {
+                max-width: 500px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+}
+
+                .contact-form input,
+                .contact-form textarea {
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 1rem;
+                font-family: inherit;
+                        }
+
+                .contact-form button {
+                background-color: #ffd700;
+                color: #000;
+                padding: 12px;
+                font-weight: bold;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: 0.3s;
+                }
+
+                .contact-form button:hover {
+                background-color: #e6c200;
+                            }
     </style>
 </head>
 <body>
+    
+        <header>
+  <nav class="navbar">
+  <a class="logo" href="#home">Astrology by Arup</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </div>
+    </nav>
+        </header>
+
 
     <header class="hero">
         <div class="overlay"></div>
@@ -135,10 +309,23 @@
         </div>        
     </header>
 
+    <a href="#about" class="arrow">⌄</a>
+
+
     <section id="about">
         <h2>About Me</h2>
         <p>I am Arup, a professional astrologer with over 20 years of experience helping people understand their life path, love, career, and destiny.</p>
     </section>
+
+    <section id="contact" class="contact-section">
+  <h2>Get in Touch</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
         <section id="contact">
             <h2>Contact Me</h2>
@@ -149,6 +336,34 @@
 
     <section id="services" class="services">
         <h2>My Services</h2>
+        <section id="zodiac">
+  <h2>Explore Your Zodiac</h2>
+        <div class="zodiac-icons">
+    <img src="ariete-segno-zodiacale.jpg" alt="Aries" title="Aries">
+    <img src="Toro-Segno-Zodiacale.jpg" alt="Taurus" title="Taurus">
+    <img src="vergine-segno-zodiacale.jpg" alt="Virgo">
+    <img src="pesci-segno-zodiacale.jpg" alt="Pisces">
+    <img src="scorpio-zodiac-guide.jpg" alt="Scorpio">
+    <img src="5Leo-InfoGraphic.jpg" alt="Lion">
+    <!-- Aggiungi le altre -->
+    </div>
+    </section>
+
+    <section id="why">
+  <h2>Why Choose Arup?</h2>
+  <div class="reasons">
+    <div class="reason"><i>⭐</i><h3>20+ Years Experience</h3><p>Trusted by clients worldwide.</p></div>
+    <div class="reason"><i>📅</i><h3>Easy Booking</h3><p>Consultation calendars integrated.</p></div>
+    <div class="reason"><i>✔️</i><h3>Accurate Readings</h3><p>Based on Vedic astrology principles.</p></div>
+  </div>
+</section>
+
+<section id="daily">
+  <h2>Today's Horoscope</h2>
+  <p class="horoscope">“Your Moon in Gemini brings creative energy—use it to express.”</p>
+</section>
+
+
         <div class="cards">
             <div class="card">
                 <h3>Personal Horoscope</h3>
@@ -166,6 +381,24 @@
     </section>
 
     <section id="testimonials">
+        <div class="test-card">
+            <img src="Image-Client1.jpg" alt="Rina K.">
+        <p>"Incredibly accurate reading."</p>
+  <strong>- Rina K.</strong>
+</div>
+
+<section id="booking">
+  <h2>Book a Session</h2>
+  <a class="btn" href="https://calendly.com/arup-astrology" target="_blank">Schedule Now</a>
+</section>
+
+
+        <div class="test-card">
+        <img src="Image-Client2.jpg" alt="Akash D.">
+        <p>"Marriage matching changed our lives."</p>
+  <strong>- Akash D.</strong>
+</div>
+
     <h2>What Clients Say</h2>
     <div class="cards">
         <div class="card">
@@ -192,15 +425,24 @@
         <p>"Arup's reading changed my life! Highly accurate and insightful." - Priya S.</p>
     </section>
 
-    <footer>
+
+<footer class="footer">
+  <div class="footer-top">
     <p>&copy; 2025 Astrology by Arup. All rights reserved.</p>
-    <p>
-        <a href="#" style="color:#ffd700; text-decoration:none;">Facebook</a> |
-        <a href="#" style="color:#ffd700; text-decoration:none;">Instagram</a> |
-        <a href="#" style="color:#ffd700; text-decoration:none;">YouTube</a>
-    </p>
+    <div class="social-links">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">YouTube</a> | 
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <a href="#">Privacy Policy</a> • 
+    <a href="#">Terms & Conditions</a>
+  </div>
 </footer>
 </body>
+
 <script>    
   const cards = document.querySelectorAll('.card');
   window.addEventListener('scroll', () => {
@@ -213,9 +455,17 @@
     });
   });
 </script>
+
 <script>
 function toggleDarkMode() {
     document.body.classList.toggle('dark');
+    <script>
+  observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.card').forEach(el => observer.observe(el));
+</script>
 }
+
 </script>
 </html>
